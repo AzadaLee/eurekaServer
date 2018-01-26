@@ -1,0 +1,20 @@
+server:
+  port: 8886
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 20
+
+      #hostname: eureka-first
+  client:
+      # registerWithEureka: false #是否将eureka自身作为应用注册到eureka注册中心
+      # fetchRegistry: false #表示是否从eureka服务器获取注册信
+      serviceUrl: #设置eureka服务器所在的地址，查询服务和注册服务都需要依赖这个地址
+          defaultZone: http://172.18.18.194:8886/eureka/,http://172.18.18.195:8886/eureka/
+logging:
+  path: /data/logs
+  level:
+    root: info
+

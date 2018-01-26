@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: eureka-cluster
+  profiles:
+    active: first
+
+
+
+
+
+
